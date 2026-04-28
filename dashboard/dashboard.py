@@ -45,11 +45,10 @@ with col2:
 st.divider()
 
 # Visualisasi 1: Berdasarkan Cuaca
+st.header("Seberapa besar pengaruh kondisi cuaca (weathersit, temp, hum, windspeed) 
+terhadap jumlah penyewaan sepeda (cnt) pada hari kerja dibandingkan hari libur selama tahun 2011–2012?")
 st.subheader("Pengaruh Kondisi Cuaca terhadap Penyewaan")
-st.markdown("""
-PSeberapa besar pengaruh kondisi cuaca (weathersit, temp, hum, windspeed) 
-terhadap jumlah penyewaan sepeda (cnt) pada hari kerja dibandingkan hari libur selama tahun 2011–2012?
-""")
+
 fig, ax = plt.subplots(figsize=(12, 6))
 sns.barplot(
     x='weathersit', 
@@ -62,11 +61,9 @@ ax.set_title("Rata-rata Penyewaan per Kondisi Cuaca", fontsize=15)
 st.pyplot(fig)
 
 # Visualisasi 2: Berdasarkan Jam (Pola Harian)
+st.header("Pada jam berapa (hr) terjadi puncak penyewaan sepeda (cnt) dan bagaimana perbedaannya 
+antara pengguna casual dan registered selama hari kerja di tahun 2012?")
 st.subheader("Pola Penyewaan Sepeda per Jam")
-st.markdown("""
-**Pertanyaan:** Pada jam berapa (hr) terjadi puncak penyewaan sepeda (cnt) dan bagaimana perbedaannya 
-antara pengguna casual dan registered selama hari kerja di tahun 2012?
-""")
 fig2, ax2 = plt.subplots(figsize=(12, 6))
 sns.lineplot(
     x='hr', 
